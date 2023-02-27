@@ -1,0 +1,22 @@
+{% extends "Header-Footer.html" %}
+{% block title %} {{user.name}} {% endblock %}
+{% block content %}
+<div class="circle"><img src="{{ url_for('static', filename='img/person-circle.svg') }}" alt="smth" height="100px"></div>
+<div class="profile">
+    <h3>Ваши данные</h3>
+    <ul>
+        <li>Логин:
+            <input type="text" name="login" placeholder="{{user.login}}"  class="input inpAcc" required><br>
+<!--            <input type="submit" class="btnAbout" value="Сохранить">-->
+        </li>
+        <li>
+            Имя:
+            <input type="text" name="login" placeholder="{{user.name}}"  class="input inpAcc" required><br>
+<!--            <input type="submit" class="btnAbout" value="Сохранить">-->
+        </li>
+
+    </ul>
+
+
+</div>
+{% endblock %}
